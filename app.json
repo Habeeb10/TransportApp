@@ -8,13 +8,20 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+
     "ios": {
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We need your location to show you the map.",
+        "NSLocationAlwaysUsageDescription": "We need your location to track your position on the map.",
+        "UIBackgroundModes": ["remote-notification"]
+      },
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "permissions": ["NOTIFICATIONS"]
       }
     },
     "web": {
@@ -23,6 +30,18 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "ios": {
+            "accessToken": "pk.eyJ1IjoiYWJpYjEwMCIsImEiOiJjbTVhMm9oZnEzemF3MmpwN3prZ3o4ZGtvIn0.c7zqMK2oSAWgKBx_-p0r5w"
+          },
+          "android": {
+            "accessToken": "pk.eyJ1IjoiYWJpYjEwMCIsImEiOiJjbTVhMm9oZnEzemF3MmpwN3prZ3o4ZGtvIn0.c7zqMK2oSAWgKBx_-p0r5w"
+          }
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",
