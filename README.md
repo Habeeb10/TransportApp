@@ -1,3 +1,58 @@
+Overview
+
+This application simplifies daily commutes by allowing users to:
+
+Track public transport in real-time.
+Plan routes efficiently.
+Stay updated with notifications about delays, cancellations, or nearby stops.
+Access routes and schedules offline.
+Features
+
+Track Public Transport: View real-time locations of buses and trains on an interactive map.
+Plan Routes: Get suggestions for the best routes based on start and end points.
+Receive Notifications: Alerts for any delays, cancellations, or nearby stops.
+Offline Support: Access schedules and routes even without an internet connection.
+
+
+Technical Stack
+
+Frontend: React Native (TypeScript)
+State Management: Redux Toolkit and RTK Query
+Backend Integration: REST APIs and WebSocket
+Mapping and Geolocation: Mapbox SDK
+Offline Storage: SQLite
+Development Tools: Expo for prototyping and custom native module integration
+Architecture and Design
+
+1. Modular Component Design
+Each feature is implemented as a reusable and maintainable component.
+
+2. State Management
+Managed globally using Redux Toolkit, with RTK Query for efficient API integrations.
+
+3. Real-Time Updates
+Powered by WebSocket to ensure timely updates of public transport data.
+
+4. Offline Support
+SQLite is used to store schedules and routes for offline access.
+
+5. Scalable Navigation
+React Navigation is configured to support dynamic and nested routes.
+
+6. Mapping and Geolocation
+Mapbox SDK is integrated for interactive maps, real-time tracking, and geolocation services.
+
+Getting Started
+
+Follow these instructions to set up and run the project locally.
+
+Prerequisites
+Node.js (>=14.x)
+Yarn or npm
+Expo CLI
+Mapbox Account and Access Token
+
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
